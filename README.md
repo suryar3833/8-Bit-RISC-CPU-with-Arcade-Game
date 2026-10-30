@@ -11,7 +11,7 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 <!-- Replace the file name below with your best photo or GIF -->
-<img src="docs/images/demo.gif" alt="Demo of the arcade running on the FPGA" width="650"/>
+<img src="docs/images/demo.JPG" alt="Demo of the arcade running on the FPGA" width="650"/>
 
 </div>
 
@@ -32,19 +32,18 @@ The games are **not** dedicated hardware. They are a **225-instruction assembly 
 - 🎮 **Two games** selected by switches: Pong (2 players) and Breakout (8 bricks)
 - 🔢 **Live scores** on the seven-segment displays
 - 🐍 **Custom two-pass assembler** that generates `instruction_rom.v` from assembly
-- ✅ **Verified over ~344,000 frames** against an independent model of the game rules
 
 ## 📸 Gallery
 
 | Home screen | Pong |
 |:---:|:---:|
-| <img src="docs/images/home.jpg" width="380"/> | <img src="docs/images/pong.jpg" width="380"/> |
+| <img src="docs/images/home.JPG" width="380"/> | <img src="docs/images/pong.JPG" width="380"/> |
 | **Breakout** | **Invalid input screen** |
-| <img src="docs/images/breakout.jpg" width="380"/> | <img src="docs/images/invalid.jpg" width="380"/> |
+| <img src="docs/images/breakout.JPG" width="380"/> | <img src="docs/images/invalid.JPG" width="380"/> |
 
 | FPGA setup | Block diagram |
 |:---:|:---:|
-| <img src="docs/images/board.jpg" width="380"/> | <img src="docs/images/block_diagram.png" width="380"/> |
+| <img src="docs/images/board.JPG" width="380"/> | <img src="docs/images/block_diagram.PNG" width="380"/> |
 
 ## 🎛️ Controls
 
@@ -193,15 +192,6 @@ Encoding examples from the generated ROM: `LDI r1, 120` = `0x1278`, `ADD r1, r1,
 4. Assign pins for `CLOCK_50`, `SW`, `KEY`, `VGA_*` and `HEX0` to `HEX5` using your board's pin file.
 5. Compile, then program the board over USB-Blaster.
 6. Connect the VGA monitor, toggle `SW[9]` high then low to reset, and pick a screen with `SW[1:0]`.
-
-## 🔬 Verification
-
-The game program was checked before going on the board using two independent Python models:
-
-1. A **processor model** that executes the real machine code from the ROM, following the Verilog behaviour (decoding, ALU flags, branches, RAM and I/O).
-2. A **reference model** that implements the game rules directly, with no processor details.
-
-Both ran frame by frame with the same inputs, and every I/O register was compared after each frame. About **344,000 frames** were compared with **zero differences**, covering goals, paddle hits, wall bounces, brick hits, game-overs and mode changes mid-game.
 
 ## 🔮 Future improvements
 
