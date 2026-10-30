@@ -213,9 +213,3 @@ Encoding examples from the generated ROM: `LDI r1, 120` = `0x1278`, `ADD r1, r1,
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ---
-
-<div align="center">
-
-If you like this project, please give it a star!
-
-</div>
