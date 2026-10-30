@@ -105,7 +105,8 @@ The processor never draws on screen directly. It stores the ball position, paddl
 ┌──────────┬────────┬────────┬────────┬────────┐
 │  opcode  │   rd   │   ra   │   rb   │   -    │
 └──────────┴────────┴────────┴────────┴────────┘
-                     └──── imm / address / jump target [7:0] ────┘
+                       └─── imm / address / ───┘
+                           jump target [7:0]
 ```
 
 ### Instruction set
@@ -171,7 +172,6 @@ Encoding examples from the generated ROM: `LDI r1, 120` = `0x1278`, `ADD r1, r1,
 │   └── pixel_renderer.v        # Draws paddles, ball and bricks per pixel
 ├── docs/
 │   └── images/                 # Photos and diagrams used in this README
-├── .gitignore
 ├── LICENSE
 └── README.md
 ```
