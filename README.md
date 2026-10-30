@@ -5,10 +5,8 @@
 ### A custom 8-bit processor, built from scratch in Verilog, that plays **Pong** and **Breakout** on a VGA monitor, running on an FPGA.
 
 ![Verilog](https://img.shields.io/badge/Language-Verilog-blue)
-![FPGA](https://img.shields.io/badge/Board-Terasic%20DE10-orange)
+![FPGA](https://img.shields.io/badge/Board-DE10-orange)
 ![Tool](https://img.shields.io/badge/Tool-Quartus%20Prime-0071C5)
-![Clock](https://img.shields.io/badge/Clock-50%20MHz-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
 
 <!-- Replace the file name below with your best photo or GIF -->
 <img src="docs/images/demo.JPG" alt="Demo of the arcade running on the FPGA" width="650"/>
