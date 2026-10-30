@@ -93,7 +93,6 @@ The processor never draws on screen directly. It stores the ball position, paddl
 | Instruction memory | 256 x 16 bits (program uses 225 locations) |
 | Data memory | 256 x 8 bits (`0x00-0xEF` RAM, `0xF0-0xFF` I/O) |
 | Flags | Zero (Z) and carry / borrow (C) |
-| Execution | Single cycle, CPI = 1 |
 
 ### Instruction format
 
