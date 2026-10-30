@@ -94,7 +94,6 @@ The processor never draws on screen directly. It stores the ball position, paddl
 | Data memory | 256 x 8 bits (`0x00-0xEF` RAM, `0xF0-0xFF` I/O) |
 | Flags | Zero (Z) and carry / borrow (C) |
 | Execution | Single cycle, CPI = 1 |
-| Clock | 50 MHz |
 
 ### Instruction format
 
@@ -149,7 +148,6 @@ Encoding examples from the generated ROM: `LDI r1, 120` = `0x1278`, `ADD r1, r1,
 - **Equality test:** `SUB` then `BZ` / `BNZ`. **Less-than test:** `SUB` then `BC`.
 - **Test a register against zero:** `OR r, r, r` sets the flag without changing the value.
 - **Shift left by one:** `ADD r, r, r`, used to walk a bit mask across the eight bricks.
-- The CPU is idle more than **99.98%** of the time (the longest frame needs 173 of 1,000,000 cycles), which leaves lots of room for more games.
 
 ## Repository structure
 
